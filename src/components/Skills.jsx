@@ -6,34 +6,34 @@ const skillCategories = [
   {
     icon: "🗣️",
     title: "Bahasa",
-    color: "bg-pink-100 dark:bg-pink-900/30",
+    color: "bg-red-100 dark:bg-[#800020]/30",
     skills: [
       { name: "Bahasa Indonesia", level: 92 },
-      { name: "Bahasa Inggris", level: 87 },
-      { name: "Bahasa Arab", level: 90 },
+      { name: "Bahasa Inggris", level: 100 },
+      { name: "Bahasa Arab", level: 80 },
       { name: "Bahasa Jepang", level: 70 },
     ],
   },
   {
     icon: "🌍",
     title: "IPS",
-    color: "bg-pink-100 dark:bg-pink-900/30",
+    color: "bg-red-100 dark:bg-[#800020]/30",
     skills: [
       { name: "Sosiologi", level: 90 },
-      { name: "Ekonomi", level: 95 },
-      { name: "Geografi", level: 90 },
-      { name: "Sejarah", level: 89 },
+      { name: "Ekonomi", level: 78 },
+      { name: "Geografi", level: 85 },
+      { name: "Sejarah", level: 86 },
     ],
   },
   {
     icon: "🧠",
     title: "IPA",
-    color: "bg-pink-100 dark:bg-pink-900/30",
+    color: "bg-red-100 dark:bg-[#800020]/30",
     skills: [
-      { name: "Biologi", level: 95 },
+      { name: "Biologi", level: 100 },
       { name: "Kimia", level: 92 },
       { name: "Fisika", level: 85 },
-      { name: "Matematika", level: 85 },
+      { name: "Matematika", level: 77 },
     ],
   },
 ];
@@ -52,7 +52,7 @@ function SkillBar({ name, level, animate }) {
       </div>
       <div className="w-full h-2 bg-stone-100 dark:bg-stone-700 rounded-full overflow-hidden">
         <div
-          className="h-full bg-pink-500 dark:bg-pink-400 rounded-full transition-all duration-1000 ease-out"
+          className="h-full bg-[#800020] dark:bg-[#a8324a] rounded-full transition-all duration-1000 ease-out"
           style={{ width: animate ? `${level}%` : "0%" }}
         />
       </div>
@@ -68,7 +68,8 @@ function SkillCard({ category, animate }) {
         bg-white dark:bg-stone-800
         border border-stone-100 dark:border-stone-700
         rounded-2xl shadow-sm p-6
-        hover:shadow-md transition-shadow duration-300
+        hover:shadow-md hover:-translate-y-1
+        transition-all duration-300
       "
     >
       {/* Header Card */}
@@ -120,20 +121,20 @@ export default function Skills() {
       ref={sectionRef}
       className="
         py-24 px-6
-        bg-gradient-to-br from-pink-50 via-pink-100 to-pink-200/30
-        dark:from-pink-950 dark:via-pink-900 dark:to-pink-950/10
+        bg-gradient-to-br from-rose-50 via-white to-red-100/40
+        dark:from-stone-950 dark:via-stone-900 dark:to-red-950/20
       "
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-pink-500 dark:text-pink-400 tracking-widest uppercase mb-2">
+          <p className="text-sm font-semibold text-[#800020] dark:text-[#a8324a] tracking-widest uppercase mb-2">
             Keahlian
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 dark:text-white mb-4">
             Kemampuan Akademis
           </h2>
-          <div className="w-16 h-1 bg-pink-500 dark:bg-pink-400 rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#800020] dark:bg-[#a8324a] rounded-full mx-auto" />
         </div>
 
         {/* Grid 3 Card */}

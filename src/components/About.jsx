@@ -24,47 +24,43 @@ export default function About() {
       id="tentang"
       className="
         py-24 px-6
-        bg-gradient-to-br from-slate-50 via-white to-teal-50/30
-        dark:from-stone-950 dark:via-stone-900 dark:to-teal-950/20
+        bg-gradient-to-br from-rose-50 via-white to-red-100/40
+        dark:from-stone-950 dark:via-stone-900 dark:to-red-950/20
       "
     >
       <div className="max-w-6xl mx-auto">
         {/* ── Header ── */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-teal-500 dark:text-teal-400 tracking-widest uppercase mb-2">
+          <p className="text-sm font-semibold text-[#800020] dark:text-[#a8324a] tracking-widest uppercase mb-2">
             Tentang Saya
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 dark:text-white mb-4">
             Mengenal Lebih Dekat
           </h2>
-          <div className="w-16 h-1 bg-teal-500 dark:bg-teal-400 rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#800020] dark:bg-[#a8324a] rounded-full mx-auto" />
         </div>
 
         {/* ── Konten Utama ── */}
         <div className="flex flex-col md:flex-row gap-6 items-start">
-          {/* ════════════════════════
-               KIRI — Ilustrasi Card
-          ════════════════════════ */}
+          {/* KIRI */}
           <div className="w-full md:w-[45%] flex-shrink-0">
             <div
               className="
               relative rounded-2xl overflow-visible
-              bg-teal-100 dark:bg-teal-900/30
+              bg-red-100 dark:bg-[#5c0018]/30
               min-h-[420px] flex items-center justify-center
             "
             >
-              {/* Ilustrasi */}
               <img
-                src="/images/ilustrasi.png"
+                src="/images/woman-working-home.png"
                 alt="Ilustrasi"
                 className="w-52 sm:w-64 object-contain drop-shadow-lg"
                 onError={(e) => {
                   e.target.src =
-                    "https://placehold.co/300x300/ccfbf1/0d9488?text=Ilustrasi";
+                    "https://placehold.co/300x300/fecaca/7f1d1d?text=Ilustrasi";
                 }}
               />
 
-              {/* Badge pojok kanan bawah */}
               <div
                 className="
                 absolute -bottom-4 right-6
@@ -83,11 +79,9 @@ export default function About() {
             </div>
           </div>
 
-          {/* ════════════════════════
-               KANAN — Deskripsi + Stats
-          ════════════════════════ */}
+          {/* KANAN */}
           <div className="w-full md:flex-1 flex flex-col gap-4 md:mt-0 mt-8">
-            {/* Accordion Deskripsi */}
+            {/* Accordion */}
             <div
               className="
               bg-white dark:bg-stone-800
@@ -95,7 +89,6 @@ export default function About() {
               rounded-2xl shadow-sm overflow-hidden
             "
             >
-              {/* Header Accordion */}
               <button
                 onClick={() => setOpen(!open)}
                 className="
@@ -108,7 +101,7 @@ export default function About() {
                 <span className="text-xl font-bold text-stone-900 dark:text-white">
                   Deskripsi
                 </span>
-                <span className="text-teal-500 dark:text-teal-400">
+                <span className="text-[#800020] dark:text-[#a8324a]">
                   {open ? (
                     <FiChevronUp size={22} />
                   ) : (
@@ -117,7 +110,6 @@ export default function About() {
                 </span>
               </button>
 
-              {/* Isi Accordion */}
               <div
                 className={`
                   overflow-hidden transition-all duration-300 ease-in-out
@@ -126,24 +118,21 @@ export default function About() {
               >
                 <div className="px-6 pb-6 flex flex-col gap-3">
                   <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-                    Perkenalkan nama saya Ziyad Al Azhar, saya lahir di
-                    Lhoksukon pada tanggal 17 Mei 2010, saya sedang menempuh
-                    jenjang pendidikan kelas 10 di Man 1 Banda Aceh, sekarang
-                    ini saya tinggal di daerah Lampulo lebih tepatnya di Kota
-                    Banda Aceh.
+                    Perkenalkan nama saya Qaisa Kamila, biasa dipanggil Qaisa.
+                    Saya lahir di Banda Aceh pada tanggal 16 Mei 2010. Saat ini
+                    saya bersekolah di MAN 1 Banda Aceh dan tinggal di Kp.
+                    Laksana, Kec. Kuta Alam.
                   </p>
                   <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-                    Saya adalah salah satu dari seorang pelajar yang memiliki
-                    ambisi besar terhadap cita-citanya di masa depan nanti. Di
-                    saat teman-teman sebayaku sedang asik bermain, saya lebih
-                    memilih untuk menyelesaikan tugas sekolah yang diberikan
-                    oleh guru.
+                    Saya membangun aplikasi web menarik dan interaktif, serta
+                    terus belajar untuk menciptakan pengalaman pengguna yang
+                    modern dan inspiratif.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Grid Stats 2x2 */}
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-4">
               {stats.map((stat) => (
                 <div
@@ -156,7 +145,7 @@ export default function About() {
                     hover:shadow-md transition-shadow duration-200
                   "
                 >
-                  <span className="text-teal-500 dark:text-teal-400">
+                  <span className="text-[#800020] dark:text-[#a8324a]">
                     {stat.icon}
                   </span>
                   <p className="text-2xl font-bold text-stone-900 dark:text-white">

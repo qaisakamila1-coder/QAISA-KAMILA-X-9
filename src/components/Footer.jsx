@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer
       className="
-      w-full border-t border-pink-100 dark:border-pink-900
+      w-full border-t border-red-100 dark:border-[#5c0018]
       bg-white dark:bg-stone-950
       py-5 px-8
     "
@@ -39,8 +39,8 @@ export default function Footer() {
         {/* Kiri */}
         <p className="text-sm text-stone-500 dark:text-stone-400 flex items-center gap-1.5">
           © 2026 Made with
-          <FaHeart size={13} className="text-pink-500 inline" />
-          by Ufaira
+          <FaHeart size={13} className="text-[#800020] inline animate-pulse" />
+          by Qaisa
         </p>
 
         {/* Kanan */}
@@ -54,7 +54,7 @@ export default function Footer() {
               aria-label={s.label}
               className="
                 text-stone-400 dark:text-stone-500
-                hover:text-pink-500 dark:hover:text-pink-400
+                hover:text-[#800020] dark:hover:text-[#a8324a]
                 transition-colors duration-200
               "
             >

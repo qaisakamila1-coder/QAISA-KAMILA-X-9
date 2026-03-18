@@ -7,12 +7,12 @@ const contactInfo = [
   {
     icon: <TbMail size={20} />,
     label: "Email",
-    value: "alahyaufaira@gmail.com",
+    value: "qaisakamila1@gmail.com"
   },
   {
     icon: <TbPhone size={20} />,
     label: "Telepon",
-    value: "+62 822-1829-7417",
+    value: "+62 821-6064-1911"
   },
   {
     icon: <TbMapPin size={20} />,
@@ -63,8 +63,8 @@ export default function Contact() {
     bg-white dark:bg-stone-700/50
     text-stone-900 dark:text-stone-100
     placeholder:text-stone-400 dark:placeholder:text-stone-500
-    focus:outline-none focus:ring-2 focus:ring-pink-400
-    dark:focus:ring-pink-500 focus:border-transparent
+    focus:outline-none focus:ring-2 focus:ring-[#800020]
+    dark:focus:ring-[#a8324a] focus:border-transparent
     transition-all duration-200
   `;
 
@@ -74,8 +74,8 @@ export default function Contact() {
       ref={sectionRef}
       className="
         py-24 px-6
-        bg-gradient-to-br from-pink-50 via-pink-100 to-pink-200/20
-        dark:from-pink-950 dark:via-pink-900 dark:to-pink-950/10
+        bg-gradient-to-br from-rose-50 via-white to-red-100/40
+        dark:from-stone-950 dark:via-stone-900 dark:to-red-950/20
       "
     >
       <div className="max-w-6xl mx-auto">
@@ -87,13 +87,13 @@ export default function Contact() {
             transform: animate ? "translateY(0)" : "translateY(30px)",
           }}
         >
-          <p className="text-sm font-semibold text-pink-500 dark:text-pink-400 tracking-widest uppercase mb-2">
+          <p className="text-sm font-semibold text-[#800020] dark:text-[#a8324a] tracking-widest uppercase mb-2">
             Kontak
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 dark:text-white mb-4">
             Hubungi Saya
           </h2>
-          <div className="w-16 h-1 bg-pink-500 dark:bg-pink-400 rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#800020] dark:bg-[#a8324a] rounded-full mx-auto" />
         </div>
 
         {/* Main content */}
@@ -113,8 +113,7 @@ export default function Contact() {
               </h3>
               <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">
                 Ingin meningkatkan keterampilan belajar Anda? Saya siap membantu
-                Anda mencapai tujuan tersebut. Jangan ragu untuk menghubungi
-                saya.
+                Anda mencapai tujuan tersebut.
               </p>
             </div>
 
@@ -132,14 +131,14 @@ export default function Contact() {
                   style={{
                     opacity: animate ? 1 : 0,
                     transform: animate ? "translateX(0)" : "translateX(-30px)",
-                    transition: `opacity 0.6s ease-out ${300 + i * 100}ms, transform 0.6s ease-out ${300 + i * 100}ms, box-shadow 0.2s ease`,
+                    transition: `opacity 0.6s ease-out ${300 + i * 100}ms, transform 0.6s ease-out ${300 + i * 100}ms`,
                   }}
                 >
                   <div
                     className="
                       w-10 h-10 flex items-center justify-center flex-shrink-0
-                      rounded-xl bg-pink-50 dark:bg-pink-900/30
-                      text-pink-500 dark:text-pink-400
+                      rounded-xl bg-red-50 dark:bg-[#5c0018]/30
+                      text-[#800020] dark:text-[#a8324a]
                     "
                   >
                     {item.icon}
@@ -158,7 +157,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Form */}
           <div
             className="
               w-full md:flex-1
@@ -175,75 +174,53 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <label className="block text-xs font-medium text-stone-600 dark:text-stone-400 mb-1.5">
-                    Nama
-                  </label>
-                  <input
-                    type="text"
-                    name="nama"
-                    value={formData.nama}
-                    onChange={handleChange}
-                    placeholder="Nama Anda"
-                    required
-                    className={inputClass}
-                  />
-                </div>
-                <div className="flex-1">
-                  <label className="block text-xs font-medium text-stone-600 dark:text-stone-400 mb-1.5">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="email@contoh.com"
-                    required
-                    className={inputClass}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-medium text-stone-600 dark:text-stone-400 mb-1.5">
-                  Subjek
-                </label>
                 <input
                   type="text"
-                  name="subjek"
-                  value={formData.subjek}
+                  name="nama"
+                  value={formData.nama}
                   onChange={handleChange}
-                  placeholder="Subjek pesan"
+                  placeholder="Nama Anda"
+                  required
+                  className={inputClass}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="email@contoh.com"
                   required
                   className={inputClass}
                 />
               </div>
 
-              <div>
-                <label className="block text-xs font-medium text-stone-600 dark:text-stone-400 mb-1.5">
-                  Pesan
-                </label>
-                <textarea
-                  name="pesan"
-                  value={formData.pesan}
-                  onChange={handleChange}
-                  placeholder="Tuliskan pesan Anda..."
-                  required
-                  rows={5}
-                  className={`${inputClass} resize-none`}
-                />
-              </div>
+              <input
+                type="text"
+                name="subjek"
+                value={formData.subjek}
+                onChange={handleChange}
+                placeholder="Subjek pesan"
+                required
+                className={inputClass}
+              />
+
+              <textarea
+                name="pesan"
+                value={formData.pesan}
+                onChange={handleChange}
+                placeholder="Tuliskan pesan Anda..."
+                required
+                rows={5}
+                className={`${inputClass} resize-none`}
+              />
 
               <button
                 type="submit"
                 className="
                   w-full flex items-center justify-center gap-2
-                  py-3 bg-pink-500 hover:bg-pink-400
-                  dark:bg-pink-500 dark:hover:bg-pink-400
+                  py-3 bg-[#800020] hover:bg-[#a8324a]
                   text-white text-sm font-medium rounded-xl
                   transition-colors duration-200
-                  disabled:opacity-60 disabled:cursor-not-allowed
                 "
               >
                 <TbSend size={17} />
@@ -251,7 +228,7 @@ export default function Contact() {
               </button>
 
               {submitted && (
-                <p className="text-center text-sm text-pink-500 dark:text-pink-400 animate-pulse">
+                <p className="text-center text-sm text-[#800020] dark:text-[#a8324a] animate-pulse">
                   Terima kasih! Pesan kamu sudah diterima.
                 </p>
               )}

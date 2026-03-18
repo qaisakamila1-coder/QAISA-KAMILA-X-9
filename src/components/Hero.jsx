@@ -32,13 +32,13 @@ export default function Hero() {
       className="
         relative min-h-screen flex items-center
         px-6 pt-24 pb-16 overflow-hidden
-        bg-gradient-to-br from-teal-50 via-cyan-50 to-white
-        dark:from-stone-950 dark:via-teal-950 dark:to-stone-950
+        bg-gradient-to-br from-rose-50 via-white to-red-100/40
+        dark:from-stone-950 dark:via-stone-900 dark:to-red-950/20
       "
     >
       {/* Background */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-teal-100/60 dark:bg-teal-900/20 blur-3xl -z-0 translate-x-1/3 -translate-y-1/4" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-cyan-100/40 dark:bg-cyan-900/10 blur-3xl -z-0 -translate-x-1/3 translate-y-1/4" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-red-100/60 dark:bg-[#5c0018]/20 blur-3xl -z-0 translate-x-1/3 -translate-y-1/4" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-rose-100/40 dark:bg-[#800020]/10 blur-3xl -z-0 -translate-x-1/3 translate-y-1/4" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
@@ -59,7 +59,7 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-5">
               <span className="text-stone-900 dark:text-white">Hai 👋</span>
               <br />
-              <span className="text-cyan-500 dark:text-cyan-400">
+              <span className="text-[#800020] dark:text-[#a8324a]">
                 Salam Kenal
               </span>
             </h1>
@@ -70,8 +70,9 @@ export default function Hero() {
               leading-relaxed max-w-sm mx-auto md:mx-0 mb-8
             "
             >
-              Saya membangun aplikasi web yang menarik dan interaktif, serta
-              membagikan pengalaman belajar yang inspiratif.
+              Saya seorang pelajar yang sedang belajar dan mengembangkan skill di dunia web development.
+              Saya senang membangun aplikasi web yang menarik dan interaktif serta terus belajar
+              untuk menciptakan pengalaman pengguna yang modern.
             </p>
 
             {/* CTA Buttons */}
@@ -85,7 +86,7 @@ export default function Hero() {
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="
-                  px-6 py-2.5 bg-cyan-500 hover:bg-cyan-400
+                  px-6 py-2.5 bg-[#800020] hover:bg-[#a8324a]
                   text-white text-sm font-medium rounded-full
                   transition-colors duration-200
                 "
@@ -104,8 +105,8 @@ export default function Hero() {
                 className="
                   px-6 py-2.5 border border-stone-300 dark:border-stone-600
                   text-stone-700 dark:text-stone-300 text-sm font-medium
-                  rounded-full hover:border-cyan-400 hover:text-cyan-500
-                  dark:hover:border-cyan-400 dark:hover:text-cyan-400
+                  rounded-full hover:border-[#800020] hover:text-[#800020]
+                  dark:hover:border-[#a8324a] dark:hover:text-[#a8324a]
                   transition-colors duration-200 bg-white/60 dark:bg-stone-900/40
                 "
               >
@@ -126,8 +127,8 @@ export default function Hero() {
                     w-10 h-10 flex items-center justify-center
                     rounded-full border border-stone-200 dark:border-stone-700
                     text-stone-500 dark:text-stone-400
-                    hover:border-cyan-400 hover:text-cyan-500
-                    dark:hover:border-cyan-400 dark:hover:text-cyan-400
+                    hover:border-[#800020] hover:text-[#800020]
+                    dark:hover:border-[#a8324a] dark:hover:text-[#a8324a]
                     bg-white/60 dark:bg-stone-900/40
                     transition-all duration-200
                   "
@@ -144,7 +145,7 @@ export default function Hero() {
               <div
                 className="
                 absolute inset-0 rounded-full
-                border-4 border-teal-200 dark:border-teal-700
+                border-4 border-red-200 dark:border-[#5c0018]
                 scale-110
               "
               />
@@ -152,7 +153,7 @@ export default function Hero() {
               <div
                 className="
                 absolute inset-0 rounded-full
-                bg-teal-100 dark:bg-teal-900/40
+                bg-red-100 dark:bg-[#5c0018]/40
               "
               />
 
@@ -167,7 +168,7 @@ export default function Hero() {
                 "
                 onError={(e) => {
                   e.target.src =
-                    "https://placehold.co/400x400/ccfbf1/0d9488?text=Foto";
+                    "https://placehold.co/400x400/fecaca/7f1d1d?text=Foto";
                 }}
               />
             </div>

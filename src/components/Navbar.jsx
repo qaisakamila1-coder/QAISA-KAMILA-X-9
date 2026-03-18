@@ -61,7 +61,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
         scrolled
-          ? "bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm border-pink-100 dark:border-pink-900"
+          ? "bg-white/95 dark:bg-stone-950/95 backdrop-blur-md shadow-sm border-red-100 dark:border-[#5c0018]"
           : "bg-white dark:bg-stone-950 border-transparent"
       }`}
     >
@@ -73,9 +73,9 @@ export default function Navbar() {
             e.preventDefault();
             handleLinkClick("#beranda");
           }}
-          className="text-lg font-bold tracking-tight text-pink-500 hover:text-pink-400 transition-colors duration-200"
+          className="text-lg font-bold tracking-tight text-[#800020] hover:text-[#a8324a] transition-colors duration-200"
         >
-          Portofolio Ufaira
+          Portofolio Qaisa
         </a>
 
         {/* Desktop Nav */}
@@ -92,13 +92,13 @@ export default function Navbar() {
                   }}
                   className={`relative text-sm transition-colors duration-200 group ${
                     isActive
-                      ? "text-pink-500 font-medium"
-                      : "text-stone-500 dark:text-stone-400 hover:text-pink-500 font-normal"
+                      ? "text-[#800020] font-medium"
+                      : "text-stone-500 dark:text-stone-400 hover:text-[#800020] font-normal"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-1 left-0 h-px bg-pink-500 transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-px bg-[#800020] transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -115,12 +115,12 @@ export default function Navbar() {
             <span className="text-sm font-medium tracking-wide">EN</span>
           </div>
 
-          <div className="w-px h-4 bg-pink-100 dark:bg-pink-900" />
+          <div className="w-px h-4 bg-red-100 dark:bg-[#5c0018]" />
 
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="w-8 h-8 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200"
+            className="w-8 h-8 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-[#800020] dark:hover:text-[#a8324a] transition-colors duration-200"
           >
             {isDark ? <FiSun size={17} /> : <FiMoon size={17} />}
           </button>
@@ -136,7 +136,7 @@ export default function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label="Toggle dark mode"
-            className="w-8 h-8 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200"
+            className="w-8 h-8 flex items-center justify-center text-stone-500 dark:text-stone-400 hover:text-[#800020] dark:hover:text-[#a8324a] transition-colors duration-200"
           >
             {isDark ? <FiSun size={16} /> : <FiMoon size={16} />}
           </button>
@@ -147,17 +147,17 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-5 h-px bg-pink-500 transition-all duration-300 ${
+              className={`block w-5 h-px bg-[#800020] transition-all duration-300 ${
                 menuOpen ? "rotate-45 translate-y-1.5" : ""
               }`}
             />
             <span
-              className={`block w-5 h-px bg-pink-500 transition-all duration-300 ${
+              className={`block w-5 h-px bg-[#800020] transition-all duration-300 ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-5 h-px bg-pink-500 transition-all duration-300 ${
+              className={`block w-5 h-px bg-[#800020] transition-all duration-300 ${
                 menuOpen ? "-rotate-45 -translate-y-1.5" : ""
               }`}
             />
@@ -171,7 +171,7 @@ export default function Navbar() {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="bg-white dark:bg-stone-950 border-t border-pink-100 dark:border-pink-900 px-8 py-4 flex flex-col gap-4">
+        <ul className="bg-white dark:bg-stone-950 border-t border-red-100 dark:border-[#5c0018] px-8 py-4 flex flex-col gap-4">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
@@ -184,8 +184,8 @@ export default function Navbar() {
                   }}
                   className={`block text-sm py-1 transition-colors duration-200 ${
                     isActive
-                      ? "text-pink-500 font-medium"
-                      : "text-stone-500 dark:text-stone-400 hover:text-pink-500"
+                      ? "text-[#800020] font-medium"
+                      : "text-stone-500 dark:text-stone-400 hover:text-[#800020]"
                   }`}
                 >
                   {link.label}

@@ -6,7 +6,7 @@ const projects = [
   {
     emoji: "⭐",
     thumbnailColor:
-      "from-blue-100 via-teal-100 to-cyan-100 dark:from-blue-900/40 dark:via-teal-900/40 dark:to-cyan-900/40",
+      "from-red-100 via-rose-100 to-red-200 dark:from-[#5c0018]/40 dark:via-[#800020]/30 dark:to-[#a8324a]/30",
     title: "Motivation",
     description:
       "Platform yang berisi kumpulan motivasi dan inspirasi untuk pelajar dengan berbagai kategori.",
@@ -16,7 +16,7 @@ const projects = [
   {
     emoji: "🤓",
     thumbnailColor:
-      "from-purple-100 via-pink-100 to-purple-100 dark:from-purple-900/40 dark:via-pink-900/40 dark:to-purple-900/40",
+      "from-rose-100 via-red-100 to-rose-200 dark:from-[#800020]/30 dark:via-[#5c0018]/40 dark:to-[#a8324a]/30",
     title: "Tips",
     description:
       "Platform yang berisi kumpulan tips seputar dunia pendidikan, belajar, dan pengembangan diri.",
@@ -26,7 +26,7 @@ const projects = [
   {
     emoji: "🤔",
     thumbnailColor:
-      "from-orange-100 via-rose-100 to-pink-100 dark:from-orange-900/40 dark:via-rose-900/40 dark:to-pink-900/40",
+      "from-red-100 via-rose-100 to-red-200 dark:from-[#5c0018]/40 dark:via-[#800020]/30 dark:to-[#a8324a]/30",
     title: "Tricks",
     description:
       "Platform yang berisi kumpulan trik untuk mempermudah proses belajar dan meningkatkan produktivitas.",
@@ -42,7 +42,8 @@ function ProjectCard({ project, animate, delay }) {
         bg-white dark:bg-stone-800
         border border-stone-100 dark:border-stone-700
         rounded-2xl shadow-sm overflow-hidden
-        hover:shadow-lg transition-all duration-300
+        hover:shadow-lg hover:-translate-y-1
+        transition-all duration-300
         flex flex-col
       "
       style={{
@@ -74,15 +75,16 @@ function ProjectCard({ project, animate, delay }) {
           {project.description}
         </p>
 
+        {/* Tags */}
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
             <span
               key={tag}
               className="
                 text-xs px-3 py-1 rounded-full
-                border border-stone-200 dark:border-stone-600
-                text-stone-500 dark:text-stone-400
-                bg-stone-50 dark:bg-stone-700/50
+                border border-red-200 dark:border-[#5c0018]
+                text-[#800020] dark:text-[#a8324a]
+                bg-red-50 dark:bg-[#800020]/20
               "
             >
               {tag}
@@ -90,15 +92,14 @@ function ProjectCard({ project, animate, delay }) {
           ))}
         </div>
 
-        {/* FIX DI SINI */}
+        {/* Button */}
         <a
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
           className="
             mt-1 inline-flex items-center gap-2 self-start
-            px-5 py-2.5 bg-teal-500 hover:bg-teal-400
-            dark:bg-teal-500 dark:hover:bg-teal-400
+            px-5 py-2.5 bg-[#800020] hover:bg-[#a8324a]
             text-white text-sm font-medium rounded-full
             transition-colors duration-200
           "
@@ -135,19 +136,19 @@ export default function Projects() {
       ref={sectionRef}
       className="
         py-24 px-6
-        bg-gradient-to-br from-slate-50 via-white to-teal-50/30
-        dark:from-stone-950 dark:via-stone-900 dark:to-teal-950/20
+        bg-gradient-to-br from-rose-50 via-white to-red-100/40
+        dark:from-stone-950 dark:via-stone-900 dark:to-red-950/20
       "
     >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-teal-500 dark:text-teal-400 tracking-widest uppercase mb-2">
+          <p className="text-sm font-semibold text-[#800020] dark:text-[#a8324a] tracking-widest uppercase mb-2">
             Literasi
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-stone-900 dark:text-white mb-4">
             Proyek & Karya
           </h2>
-          <div className="w-16 h-1 bg-teal-500 dark:bg-teal-400 rounded-full mx-auto" />
+          <div className="w-16 h-1 bg-[#800020] dark:bg-[#a8324a] rounded-full mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
